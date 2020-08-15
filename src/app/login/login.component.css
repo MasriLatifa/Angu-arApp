@@ -1,10 +1,13 @@
 .form-container {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    /* flex-direction: column; */
+    /* justify-content: flex-start; */
     text-align: center;
+    box-shadow: 0px 10px 10px 19px darkslateblue;
+    margin-bottom: 30%;
 }
-.form-group{
+
+.form-group {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -19,13 +22,43 @@ input {
 label {
     justify-content: center;
 }
-.invalid{
+
+.invalid {
     border-color: red;
 }
-.d-none{
+
+.d-none {
     visibility: hidden;
-   
 }
-.if-invalid{
+
+.if-invalid {
     color: red;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+.login-form {
+    margin-top: 60px;
+}
+
+button {
+    margin-top: 50px;
+    margin-bottom: 10px;
+    padding: 2px 20px;
+    color: rgba(255, 255, 255, 0.8);
+    background: rgb( 96, 81, 174);
+    transition: all 0.2s ease-in-out;
+    border-radius: 10px;
+}
+
+.login:hover {
+    color: rgba(255, 255, 255, 1);
+    box-shadow: -1px 1px 0px 5px rgba(96, 81, 174, 0.8);
+}
+
+.continue {
+    margin-bottom: 0%;
+    color: bisque;
 }

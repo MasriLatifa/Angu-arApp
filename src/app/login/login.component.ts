@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-   userModel = new User('latifa@pseu.edu','Latifa@Masri');
+   userModel = new User('latifa@pseu.edu','Latifa@123');
   
   constructor(private route:Router) {
  

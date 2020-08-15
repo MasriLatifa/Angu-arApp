@@ -2,8 +2,6 @@
     box-sizing: border-box;
 }
 
-
-
 h2 {
     text-align: center;
 }
@@ -13,4 +11,17 @@ td {
     width: 25px;
     padding: 10px 20px;
     text-align: center;
+}
+
+.w-table {
+    box-shadow: 0px 10px 10px 19px darkslateblue;
+}
+
+.detailes-link {
+    color: bisque;
+}
+
+.search {
+    background-color: darkorchid;
+    color: white;
 }
