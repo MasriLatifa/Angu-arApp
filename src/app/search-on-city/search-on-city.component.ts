@@ -64,7 +64,7 @@ export class SearchOnCityComponent implements OnInit {
     }
   ngOnInit() {
     this.weatherService.getPosition().then(pos=>{
-      this.weatherService.getWeatherData(pos.lat, pos.lng, "find",32).subscribe(data=>{
+      this.weatherService.getWeatherData(pos.lat, pos.lng, "find",50).subscribe(data=>{
         this.forecast = data;
         console.log(this.forecast);
         this.cityInfo.push(this.forecast.list);

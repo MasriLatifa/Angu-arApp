@@ -1,9 +1,14 @@
-.container {
-    color: black;
+/* .container {
+    color: #fff;
+    background-image: url('../../assets/search-bg.jpg');
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat; 
 }
 
 .search-hero {
-    max-width: 500px;
+    max-width: 80%;
+    max-height: 10%;
 }
 
 .form-control {
@@ -18,12 +23,12 @@
 table {
     border-collapse: collapse;
     overflow: auto;
-    /* height: 300px; */
+  
 }
 
 td,
 th {
-    /* border: 1px solid yellow; */
+    
     text-align: left;
     padding: 8px;
 }
@@ -35,4 +40,14 @@ th {
 
 S button {
     margin-top: 100px;
+}  */
+
+.active-pink-2 input[type=text]:focus:not([readonly]) {
+    border-bottom: 1px solid #f48fb1;
+    box-shadow: 0 1px 0 0 #f48fb1;
+}
+
+img.search {
+    width: 10px;
+    margin-right: 10px;
 }

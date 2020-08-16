@@ -13,6 +13,7 @@ import { SearchOnCityComponent } from './search-on-city/search-on-city.component
 
 import { FilterpipePipe } from './pipes/filterpipe.pipe';
 import { LoginComponent } from './login/login.component';
+import { FilterPipe } from './pipes/filter.pipe';
 // import { TempConverterPipe } from './pipes/temp-converter.pipe';
 // import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 // import { NgxPageScrollModule } from 'ngx-page-scroll';
@@ -27,6 +28,7 @@ import { LoginComponent } from './login/login.component';
     SearchOnCityComponent,
     FilterpipePipe,
     LoginComponent,
+    FilterPipe,
     // NgxPageScrollCoreModule,
     // NgxPageScrollModule 
     // TempConverterPipe,
