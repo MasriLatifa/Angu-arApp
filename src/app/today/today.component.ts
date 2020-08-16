@@ -14,6 +14,7 @@ export class TodayComponent implements OnInit {
   forecast;
   weatherInfo;
   fourDayWeatherInfo = [];
+  CurrentDate = new Date();
   constructor(private _route: Router,private weatherService: WthService) { }
 
   ngOnInit() {

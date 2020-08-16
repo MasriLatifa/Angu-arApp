@@ -37,11 +37,14 @@ export class WthService {
   setWeatherInfo(forecast: any){
     
     for(let i=0; i<forecast.list.length ; i=i+8){
+      if(forecast.list[i].weather[0].main == "clear"){
+        var icon = "../../assets/sunny.ico";
+      }
       this.weatherInfo = { 
         id: i/8,
         date: forecast.list[i].dt_txt,
         mainstate:forecast.list[i].weather[0].main,
-        // icon:forecast.list[i].main.weather[0].icon,
+        icon: icon,
         temp:forecast.list[i].main.temp,
         temp_min: forecast.list[i].main.temp_min,
         temp_max: forecast.list[i].main.temp_max,

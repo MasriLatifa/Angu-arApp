@@ -2,15 +2,10 @@
     box-sizing: border-box;
 }
 
-h2 {
-    text-align: center;
-}
-
 td {
-    text-align: center;
+    text-align: left;
     width: 25px;
     padding: 10px 20px;
-    text-align: center;
 }
 
 .w-table {
@@ -18,10 +13,42 @@ td {
 }
 
 .detailes-link {
-    color: bisque;
+    color: rgb(240, 240, 122);
 }
 
 .search {
     background-color: darkorchid;
     color: white;
+}
+
+.img-small {
+    width: 25%;
+    height: 10%;
+}
+
+.img-sm {
+    width: 50px;
+}
+
+.curr-detailes {
+    margin-top: 10px;
+    font-size: large;
+}
+
+.day-box {
+    border: 1px solid darkmagenta;
+    border-radius: 5px;
+    margin-left: 3px;
+    box-shadow: 0px 5px 5px 10px darkslateblue;
+}
+
+.mr-sm {
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.description {
+    opacity: 0.7;
+    font-size: small;
+    text-align: center;
 }

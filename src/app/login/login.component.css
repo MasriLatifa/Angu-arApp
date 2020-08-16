@@ -32,7 +32,8 @@ label {
 }
 
 .if-invalid {
-    color: red;
+    color: rgb(134 0 29);
+    font-size: initial;
 }
 
 h1 {

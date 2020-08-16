@@ -1,29 +1,56 @@
 <div class="container ">
     <div>
-        <h2>{{"weather in "+weather?.name+" /"+weather?.sys?.country}}</h2><br>
-        <!-- <h3>{{fourDayWeatherInfo[0]?.temp}}</h3> -->
+        <h2 class="col-12 text-left">{{weather?.name+", "+weather?.sys?.country}}</h2>
+        <h6 class="col-12 text-left" >{{CurrentDate | date:'EEEE, MMM dd'}}</h6>
+        <div class="col-12 d-inline-flex">
+            <img  src="../../assets/smilled-sun.ico" class="img-small" />
+            <!--<h2 >{{weather?.weather[0]?.description+weather?.weather[0]?.icon}}</h2><br>-->
+            <div class="col-6 flex-column curr-detailes">
+                <p class="mr-sm">{{(fourDayWeatherInfo[0]?.temp) - 273 | number:'2.1-3' }}°C</p>
+                <p class="description">{{weather?.weather[0]?.description}}</p>    
+            </div>
+         </div>
     </div>
+    <hr>
+        <div class="d-inline-flex col-12">
+            <div class="col-4 flex-column ">
+                <p class="mr-sm">{{(weather?.main?.temp_max) - 273 | number:'2.1-3' }}°C</p>
+                <p class="description">High</p>
+            </div>
+            <div class="col-4 flex-column   ">
+                <p class="mr-sm">{{(weather?.wind?.speed) | number:'2.1-3' }}mph</p>
+                <p class="description">Wind</p>
+            </div><div class="col-4 flex-column">
+                <p class="mr-sm">{{(weather?.main?.pressure)  }}</p>
+                <p class="description">pressure</p>
+            </div>
+        </div>
+        <div class="d-inline-flex col-12">
+            <div class="col-4 flex-column   ">
+                <p class="mr-sm">{{(weather?.main?.temp_min) - 273 | number:'2.1-3' }}°C</p>
+                <p class="description">Low</p>
+            </div>
+            <div class="col-4 flex-column   ">
+                <p class="mr-sm">{{(weather?.clouds?.all) }} </p>
+                <p class="description">Clouds</p>
+            </div><div class="col-4 flex-column">
+                <p class="mr-sm">{{(weather?.main?.humidity) | number:'2.1-3' }}</p>
+                <p class="description">humidity</p>
+            </div>
+        </div>
+        
+    <hr>
+    <h5 class="col-12 text-dark">next 4 days</h5>
 
-    <div class="weather-list ">
-        <table class="table table-stripped w-table">
-            <thead >
-                <tr>
-                    <td>day</td>
-                    <td>temp</td>
-                    <td></td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let wth of fourDayWeatherInfo">
-                    <td>{{wth.date | date:'EEEE, MMM dd'}}</td>
-                    <td>{{(wth.temp  - 273)| number:'2.1-3'}}°C</td>
-                    <!-- <td>{{wth.temp_max - 273.15 +" °C"}}</td> -->
-
-                    <td><a class="detailes-link" [routerLink]="['/detailes-weather', wth.id]">weather detailes</a></td>
-                </tr>
-            </tbody>
-
-        </table>
+    <div class="flex-row d-inline-flex next-days " *ngFor="let wth of fourDayWeatherInfo">
+        <div class="day-box">
+            <p >{{wth.date | date:'EE'}}</p>
+            <img src="../../assets/sunny.ico" class="img-sm" />
+            <p>min: {{(wth.temp_min  - 273)| number:'2.0-0'}}°</p>
+            <p>max: {{(wth.temp_max  - 273)| number:'2.0-0'}}°</p>
+            <a class="detailes-link" [routerLink]="['/detailes-weather', wth.id]">More ..</a>
+        </div>
+    </div>
         <button (click)="searchAboutCity()" class="search col-12">Find  your city</button>
-    </div>
+    
 </div>

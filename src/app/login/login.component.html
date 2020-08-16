@@ -36,20 +36,20 @@
           [(ngModel)]="userModel.password">
         <div *ngIf="password.errors && ( password.invalid || password.touched)">
             <small class="if-invalid" *ngIf="password.errors.required">
-                password is required
-            </small>
+                *password is required
+            </small><br>
             
             <small class="if-invalid" *ngIf="password.errors.pattern">
-                the email pattern is invalid, the password must contain capital and small , symbols and characters
-            </small>
+                *the password pattern is invalid.<br> the password must contain capital and small. <br> symbols and characters
+            </small><br>
 
             <small class="if-invalid" *ngIf="password.errors.minlength">
-                password contain at least 6 didgit
-            </small>
+                *password contain at least 6 didgit
+            </small><br>
             
             <small class="if-invalid" *ngIf="password.errors.maxlength">
-                password contain maximum 12 digit
-            </small>
+                *password contain maximum 12 digit
+            </small><br>
         </div>
     </div>
 
