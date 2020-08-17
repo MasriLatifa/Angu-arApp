@@ -42,12 +42,27 @@ S button {
     margin-top: 100px;
 }  */
 
+.search-hero {
+    max-width: 100%;
+    max-height: 10%;
+}
+
 .active-pink-2 input[type=text]:focus:not([readonly]) {
     border-bottom: 1px solid #f48fb1;
     box-shadow: 0 1px 0 0 #f48fb1;
 }
 
 img.search {
-    width: 10px;
-    margin-right: 10px;
+    width: 15px;
+    margin-right: 30px;
+}
+
+.return-btn {
+    /* position: fixed; */
+    margin-left: 240px;
+}
+
+.city:hover {
+    background: #9999;
+    color: linen;
 }

@@ -1,19 +1,22 @@
 <div class="container" [@shrinkOut]="state">
-    <div class="text-center" [@shrinkOut]="isOpen" (@shrinkOut.start)="onAnimationEvent($event)" (@shrinkOut.done)="onAnimationEvent($event)">
-        <h1>Search for a city</h1>
+    <div class="d-inline-flex">
+        <div class="text-left" [@shrinkOut]="isOpen" (@shrinkOut.start)="onAnimationEvent($event)" (@shrinkOut.done)="onAnimationEvent($event)">
+           
+        </div>
+        <div>
+        <a  href="/../today" class="return-btn text-right" >Back >></a>
+        </div>
     </div>
-    
         <div class="search-hero d-inline-flex">
             <img src="../../assets/search.png" class="search"/>
             <input class="form-control active-pink-2" type="text" name="search" [(ngModel)]="searchText" placeholder="Start searching for a city by name ">
         </div>
-        <div class="cityList" (scroll)="onScroll($event)">
-            <ul *ngFor="let cityName of cityInfo[0] | filterpipe:searchText" >
-                <li>{{cityName.name}}</li>
-            </ul>
+       
+         <div class="cityList list-group list" *ngFor="let cityName of cityInfo[0] | filterpipe:searchText"  (scroll)="onScroll($event)">
+            <a href="#" class="list-group-item list-group-item-action city">{{cityName.name}}</a>
+             
         </div>
+       
    
-    <div>
-        <button (click)="backToHome()">back to home page </button>
-    </div>
+    
 </div>
