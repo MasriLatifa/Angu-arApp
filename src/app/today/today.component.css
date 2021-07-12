@@ -38,8 +38,9 @@ td {
 .day-box {
     border: 1px solid darkmagenta;
     border-radius: 5px;
-    margin-left: 3px;
+    
     box-shadow: 0px 5px 5px 10px darkslateblue;
+    max-width: fit-content;
 }
 
 .mr-sm {

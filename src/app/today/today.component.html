@@ -1,4 +1,4 @@
-<div class="container ">
+<div class="container  flex-column justify-content-center">
     <div>
         <h2 class="col-12 text-left">{{weather?.name+", "+weather?.sys?.country}}</h2>
         <h6 class="col-12 text-left" >{{CurrentDate | date:'EEEE, MMM dd'}}</h6>
@@ -42,8 +42,8 @@
     <hr>
     <h5 class="col-12 text-dark">next 4 days</h5>
 
-    <div class="flex-row d-inline-flex next-days " *ngFor="let wth of fourDayWeatherInfo">
-        <div class="day-box">
+    <div class="flex-row d-inline-flex next-days justify-content-around align-items-center" *ngFor="let wth of fourDayWeatherInfo">
+        <div class="day-box col-3 flex-fill ">
             <p >{{wth.date | date:'EE'}}</p>
             <img src="../../assets/sunny.ico" class="img-sm" />
             <p>min: {{(wth.temp_min  - 273)| number:'2.0-0'}}°</p>
